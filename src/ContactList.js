@@ -13,7 +13,6 @@ function ContactList(props: Props) {
   let children = contacts.map((contact) => {
     return <li key={contact.id} onClick={() => onContactClick(contact)}>{contact.name}</li>;
   });
-  console.log('render ContactList');
   return (
     <ul>
       {children}

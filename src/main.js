@@ -1,7 +1,9 @@
 // @flow
 import React from 'react';
-import {render} from 'react-dom';
+import ReactDOM from 'react-dom';
 import App from './App';
+import createDataStore from './helpers/createDataStore';
+import initialState from './db/initialState';
 
 let container = document.createElement('div');
 
@@ -10,11 +12,11 @@ if (document.body != null) {
 }
 
 let dataStore = createDataStore(initialState, () => {
-  update();
+  render();
 });
 
-function update() {
-  render(<App dataStore={dataStore} />, container);
+function render() {
+  ReactDOM.render(<App dataStore={dataStore} />, container);
 }
 
-update();
+render();
