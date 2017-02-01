@@ -10,6 +10,14 @@ type Props = {
   onContactClick: (Contact) => void;
 };
 
+const styles = {
+  ul: {
+    padding: 20,
+    margin: 0,
+    backgroundColor: '#eee',
+  },
+};
+
 function ContactList(props: Props) {
   let {contacts, selectedID, onContactClick} = props;
   let children = contacts.map((contact) => {
@@ -23,7 +31,7 @@ function ContactList(props: Props) {
     );
   });
   return (
-    <ul>
+    <ul style={styles.ul}>
       {children}
     </ul>
   );
