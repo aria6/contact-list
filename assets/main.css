@@ -5,5 +5,75 @@ body {
 }
 
 h1 {
-  margin: 5px 0;
+  margin: 2px 0;
+}
+
+button {
+  border-radius: 5px 5px 5px 5px;
+  background: #efefef;
+}
+
+input {
+  padding: 3px;
+  margin: 2px;
+  border-radius: 5px 0px 5px 0px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  justify-content: flex-start;
+}
+
+.header {
+  text-align: center;
+  background: #cec9c9;
+}
+
+.headerButton {
+  text-align: left;
+  background: #fbe8e8;
+}
+
+.contactDetail {
+  width: 75%;
+  text-align: left;
+  background: #c1c1c1;
+  transform-style: preserve-3d;
+  box-shadow: 5px 5px 5px #888888;
+  border-radius: 5px 5px 5px 5px;
+  margin-top: 5px;
+}
+
+.contactList {
+  width: 25%;
+  background: #f7f6f6;
+}
+
+.contentDetail {
+  display: flex;
+  justify-content: flex-start;
+}
+.contentDetailChild {
+  width: 25%;
+}
+.titikDua {
+  width: 5%;
+}
+
+.listContactDiv {
+  text-align: center;
+  padding: 5px;
+  margin: 6px;
+  background: #8ba2ff;
+  transform-style: preserve-3d;
+  box-shadow: 5px 5px 5px #888888;
+  border-radius: 0 0 20px 0;
 }

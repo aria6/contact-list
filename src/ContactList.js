@@ -10,13 +10,13 @@ type Props = {
   onContactClick: (Contact) => void;
 };
 
-const styles = {
-  ul: {
-    padding: 20,
-    margin: 0,
-    backgroundColor: '#eee',
-  },
-};
+// const styles = {
+//   ul: {
+//     padding: 20,
+//     margin: 0,
+//     backgroundColor: '#eee',
+//   },
+// };
 
 function ContactList(props: Props) {
   let {contacts, selectedID, onContactClick} = props;
@@ -31,9 +31,12 @@ function ContactList(props: Props) {
     );
   });
   return (
-    <ul style={styles.ul}>
+    <div>
+    {/* // <ul style={styles.ul}> */}
+    {/* // <ul> */}
       {children}
-    </ul>
+    {/* // </ul> */}
+  </div>
   );
 }
 

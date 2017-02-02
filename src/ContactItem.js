@@ -11,9 +11,9 @@ type Props = {
 
 function ContactItem(props: Props) {
   let {onClick, contact, isSelected} = props;
-  let child = isSelected ? <u>{contact.name}</u> : <span>{contact.name}</span>;
+  let child = isSelected ? <b>{contact.name}</b> : <span>{contact.name}</span>;
   return (
-    <li onClick={() => onClick(contact)}>{child}</li>
+    <div className="listContactDiv" onClick={() => onClick(contact)}>{child}</div>
   );
 }
 

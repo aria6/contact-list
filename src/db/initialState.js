@@ -11,9 +11,9 @@ const initialState: State = {
     },
     {
       id: '124',
-      name: 'Dian',
+      name: 'Aria',
       phoneNumber: '08999888777',
-      email: 'dian@supercool.com',
+      email: 'aria@supercool.com',
     },
     {
       id: '125',
@@ -21,8 +21,16 @@ const initialState: State = {
       phoneNumber: '088765543234',
       email: 'domi@ninjacoders.com',
     },
+    {
+      id: '126',
+      name: 'Tepin',
+      phoneNumber: '088765543277',
+      email: 'tepin@ninjacoders.com',
+    },
   ],
   selectedID: null,
+  editContactID: null,
+  isAdd: false,
 };
 
 export default initialState;
