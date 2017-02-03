@@ -3,6 +3,8 @@ import React from 'react';
 import ContactList from './ContactList';
 import ContactDetail from './ContactDetail';
 
+import TextInput from './coreUI/TextInput';
+
 import type {Contact} from './types/Contact';
 import type {State} from './types/State';
 import type {DataStore} from './helpers/createDataStore';
@@ -115,6 +117,11 @@ function App(props: Props) {
     return (selectedID === contact.id);
   });
 
+  let onTextChange = (text: string) => {
+    // return text;
+    console.log(text);
+  };
+
   return (
     <div>
       <div>
@@ -123,6 +130,11 @@ function App(props: Props) {
           <button
             onClick={showForm}
             >Add Contact</button>
+            <TextInput
+              isMultiline={false}
+              onTextChange={onTextChange}
+              isAttribute={{placeholder: 'Tes'}}
+            />
             <input
               placeholder="Search"
               onChange={searchValue}
