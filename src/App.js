@@ -92,6 +92,25 @@ function App(props: Props) {
     });
   };
 
+  let searchValue = (event: {target: {value: string}}) => {
+    dataStore.setState({
+      searchText: event.target.value,
+    });
+  };
+
+  let contentSearch = contactList.filter((contactItem) => {
+    let searchText = dataStore.getState().searchText;
+    if (searchText) {
+      if (contactItem.name.toLowerCase().includes(searchText.toLowerCase())) {
+        return contactItem;
+      }
+    }
+  });
+
+  if (dataStore.getState().searchText) {
+    contactList = contentSearch;
+  }
+
   let detailContact = contactList.find((contact) => {
     return (selectedID === contact.id);
   });
@@ -104,6 +123,10 @@ function App(props: Props) {
           <button
             onClick={showForm}
             >Add Contact</button>
+            <input
+              placeholder="Search"
+              onChange={searchValue}
+              ></input>
         </div>
         <div className="wrapper">
           <div className="contactList">

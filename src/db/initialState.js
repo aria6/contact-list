@@ -31,6 +31,7 @@ const initialState: State = {
   selectedID: null,
   editContactID: null,
   isAdd: false,
+  searchText: null,
 };
 
 export default initialState;

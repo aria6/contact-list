@@ -6,4 +6,5 @@ export type State = {
   selectedID: ?string;
   editContactID: ?string;
   isAdd: boolean;
+  searchText: ?string;
 };
